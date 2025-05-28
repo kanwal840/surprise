@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Birthday Surprise for Danish 💖</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="card" id="card">
+    <!-- Cover -->
+    <div class="card-face card-cover" id="cover" onclick="openCard()">
+      <h2>💌 Click to Open</h2>
+      <p>From your Cutepie 💍</p>
+    </div>
+
+    <!-- Wishes -->
+    <div class="card-face card-wishes" id="wishes" style="display:none;">
+      <h1>🎂 Happy Birthday, Danish! ❤️</h1>
+      <p>
+        Dear Danish Jaan,<br />
+        You are my favorite line of code,<br />
+        My infinite loop of love,<br />
+        And my forever variable of happiness. 🥰<br /><br />
+        May your life be full of joy, laughter, and zero bugs!<br />
+        <span class="hearts">❤️❤️❤️</span>
+      </p>
+      <button onclick="showPhoto()">See Your Photo 📸</button>
+    </div>
+
+    <!-- Photo -->
+    <div class="card-face card-photo" id="photo" style="display:none;">
+      <h2>Your Beautiful Smile 😍</h2>
+      <img src="photo/danish.jpeg" alt="Danish Photo" />
+      <button onclick="showLoveMessage()">Show Me Love 💖</button>
+    </div>
+
+    <!-- Love Message -->
+    <div class="card-face card-love" id="love" style="display:none;">
+      <h1>I ❤️ You, buchy!</h1>
+      <p>
+        You complete my code, my heart, and my life.<br />
+        Forever yours,<br />
+        Cutepie 💕
+      </p>
+      <button onclick="resetCard()">Turn Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

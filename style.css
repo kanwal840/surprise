@@ -1,0 +1,127 @@
+/* Background gradient animation */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background: #e66165;  /* fallback */
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    background-size: 800% 800%;
+    animation: gradientBG 20s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes gradientBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  
+  /* Card container */
+  .card {
+    width: 350px;
+    height: 450px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 30px 20px;
+    color: #641B2E;
+    user-select: none;
+  }
+  
+  /* All card faces hidden except the visible one */
+  .card-face {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    transition: opacity 0.8s ease;
+  }
+  
+  .card-face img {
+    max-width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    margin: 20px 0;
+  }
+  
+  /* Cover style */
+  .card-cover {
+    background: #eb4949;
+    color: rgb(224, 201, 201);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    user-select: none;
+  }
+  
+  /* Wishes style */
+  .card-wishes {
+    color: #E50046;
+    font-size: 1.1rem;
+  }
+  
+  .card-wishes .hearts {
+    font-size: 2rem;
+    margin-top: 10px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+  }
+  
+  /* Buttons */
+  button {
+    margin-top: 25px;
+    background: #E50046;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(229, 0, 70, 0.7);
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+  
+  button:hover {
+    background: #b91a3b;
+  }
+  
+  /* Photo style */
+  .card-photo h2 {
+    color: #8A2D3B;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  
+  .card-love h1 {
+    color: #641B2E;
+    font-size: 2rem;
+    font-family: 'Segoe UI Black', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 8px #FDAB9E;
+  }
+  
+  .card-love p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #BE5B50;
+  }
+  
